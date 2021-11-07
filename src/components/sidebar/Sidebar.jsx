@@ -2,6 +2,7 @@ import React from 'react'
 import "./sidebar.css"
 import { Error, GraphicEq, LineStyle, Timelapse, Timeline, TrendingUp, VerifiedUserSharp } from '@material-ui/icons'
 import { ModalManager } from '@material-ui/core'
+import { Link } from 'react-router-dom'
 
 const Sidebar = () => {
     return (
@@ -27,14 +28,19 @@ const Sidebar = () => {
                 <div className="sidebarMenu">
                     <h3 className="sidebarTitle">Quick Menu</h3>
                     <ul className="sidebarList">
-                        <li className="sidebarListItem">
-                            <VerifiedUserSharp/>
-                            Users
-                        </li>
-                        <li className="sidebarListItem">
-                            <Timeline/>
-                            Products
-                        </li>
+                        <Link to="/users" className="link"> 
+                            <li className="sidebarListItem">
+                                <VerifiedUserSharp/>
+                                Users
+                            </li>
+                        </Link>
+
+                        <Link to="/products" className="link">
+                            <li className="sidebarListItem">
+                                <Timeline/>
+                                Products
+                            </li>
+                        </Link>
                         <li className="sidebarListItem">
                             <TrendingUp/>
                             Transactions
