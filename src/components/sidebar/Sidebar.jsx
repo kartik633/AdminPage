@@ -1,6 +1,7 @@
 import React from 'react'
 import "./sidebar.css"
-import { LineStyle, Timeline, TrendingUp, VerifiedUserSharp } from '@material-ui/icons'
+import { Error, GraphicEq, LineStyle, Timelapse, Timeline, TrendingUp, VerifiedUserSharp } from '@material-ui/icons'
+import { ModalManager } from '@material-ui/core'
 
 const Sidebar = () => {
     return (
@@ -28,15 +29,19 @@ const Sidebar = () => {
                     <ul className="sidebarList">
                         <li className="sidebarListItem">
                             <VerifiedUserSharp/>
-                            Home
+                            Users
                         </li>
                         <li className="sidebarListItem">
                             <Timeline/>
-                            Analytics
+                            Products
                         </li>
                         <li className="sidebarListItem">
                             <TrendingUp/>
-                            Sales
+                            Transactions
+                        </li>
+                        <li className="sidebarListItem">
+                            <GraphicEq/>
+                            Reports
                         </li>
                     </ul>
                 </div>
@@ -45,15 +50,15 @@ const Sidebar = () => {
                     <ul className="sidebarList">
                         <li className="sidebarListItem">
                             <LineStyle/>
-                            Home
+                            Mail
                         </li>
                         <li className="sidebarListItem">
                             <Timeline/>
-                            Analytics
+                            Feedback
                         </li>
                         <li className="sidebarListItem">
                             <TrendingUp/>
-                            Sales
+                            Messages
                         </li>
                     </ul>
                 </div>
@@ -61,16 +66,16 @@ const Sidebar = () => {
                     <h3 className="sidebarTitle">Staff</h3>
                     <ul className="sidebarList">
                         <li className="sidebarListItem">
-                            <LineStyle/>
-                            Home
+                            <Timelapse/>
+                            Manage
                         </li>
                         <li className="sidebarListItem">
                             <Timeline/>
                             Analytics
                         </li>
                         <li className="sidebarListItem">
-                            <TrendingUp/>
-                            Sales
+                            <Error/>
+                            Reports
                         </li>
                     </ul>
                 </div>
