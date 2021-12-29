@@ -1,34 +1,45 @@
-import React from 'react'
-import "./newProduct.css"
+import React from "react";
+import "./newProduct.css";
+import styled from "styled-components";
+import Sidebar from "../../components/sidebar/Sidebar";
+import Topbar from "../../components/topbar/Topbar";
+import "../../app.css";
+const Container = styled.div``;
 
 const NewProduct = () => {
-    return (
+  return (
+    <Container>
+      <Topbar />
+      <div className="container">
+        <Sidebar />
         <div className="newProduct">
-            <h1 className="addProductTitle">New Product</h1>
-            <form className="addProductForm">
-                <div className="addProductItem">
-                <label>Image</label>
-                <input type="file" id="file" />
-                </div>
-                <div className="addProductItem">
-                <label>Name</label>
-                <input type="text" placeholder="Apple Airpods" />
-                </div>
-                <div className="addProductItem">
-                <label>Stock</label>
-                <input type="text" placeholder="123" />
-                </div>
-                <div className="addProductItem">
-                <label>Active</label>
-                <select name="active" id="active">
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </select>
-                </div>
-                <button className="addProductButton">Create</button>
-            </form>
-    </div>
-    )
-}
+          <h1 className="addProductTitle">New Product</h1>
+          <form className="addProductForm">
+            <div className="addProductItem">
+              <label>Image</label>
+              <input type="file" id="file" />
+            </div>
+            <div className="addProductItem">
+              <label>Name</label>
+              <input type="text" placeholder="Apple Airpods" />
+            </div>
+            <div className="addProductItem">
+              <label>Stock</label>
+              <input type="text" placeholder="123" />
+            </div>
+            <div className="addProductItem">
+              <label>Active</label>
+              <select name="active" id="active">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <button className="addProductButton">Create</button>
+          </form>
+        </div>
+      </div>
+    </Container>
+  );
+};
 
-export default NewProduct
+export default NewProduct;
